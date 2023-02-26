@@ -6,6 +6,7 @@ STEP 1. Restate Problem, define inputs and types, define outputs and types, defi
 restate problem:
 inputs:
 outputs:
+labels:
 assumptions:
 questions:
 edge cases:
