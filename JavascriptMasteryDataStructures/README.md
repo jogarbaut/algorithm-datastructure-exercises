@@ -25,3 +25,9 @@ Step 5. Look back and refactor
 Step 6. Analysis
 Time Complexity - O(1), O(n), O(log n), O(n^2)
 Space Complexity - O(1), O(n), O(log n), O(n^2)
+
+Time Analysis.
+const timeMySol1 = performance.now()
+// insert formula
+const timeMySol2 = performance.now()
+console.log(`---Time Elapsed for my solution: ${(timeMySol2 - timeMySol1) / 1000} secs---`)
