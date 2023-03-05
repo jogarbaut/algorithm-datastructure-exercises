@@ -44,7 +44,7 @@ console.log(selectionSort([8, 4, 5, 6, 7])) // [5, 6, 7, 8]
 
 // Step 6. Analysis
 // Time Complexity - O(n)^2
-// Space Complexity - O(n)
+// Space Complexity - O(1)
 
 // Time Analysis.
 const timeMySol1 = performance.now()
