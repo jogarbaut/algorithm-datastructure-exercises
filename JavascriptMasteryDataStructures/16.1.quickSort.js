@@ -1,9 +1,9 @@
 // A. QUICK SORT
 
 // B. Explore at least 3 examples
-// insertionSort([37, 45, 29, 81])
-// insertionSort([2, 1, 9, 65, 4])
-// insertionSort([-1, 4, 4, 5, 0])
+// quickSort([1, 10, 20, 25, 99, 83, 9, 1, 2, 3, 30])
+// quickSort([2, 1, 9, 65, 4])
+// quickSort([-1, 4, 4, 5, 0])
 
 // Step C. Break steps of solution
 // Step D. Simplify and solve
@@ -40,6 +40,8 @@ const quickSort  = (arr, left = 0, right = arr.length - 1) => {
 
 // Step E. Test solution
 console.log(quickSort([1, 10, 20, 25, 99, 83, 9, 1, 2, 3, 30]))
+console.log(quickSort([2, 1, 9, 65, 4]))
+console.log(quickSort([1, 4, 4, 5, 0]))
 
 // Step F. Analysis
 // Time Complexity - O(n log n)

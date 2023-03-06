@@ -1,9 +1,9 @@
 // A. MERGE SORT
 
 // B. Explore at least 3 examples
-// insertionSort([37, 45, 29, 81])
-// insertionSort([2, 1, 9, 65, 4])
-// insertionSort([-1, 4, 4, 5, 0])
+// mergeSort([37, 45, 29, 81])
+// mergeSort([2, 1, 9, 65, 4])
+// mergeSort([-1, 4, 4, 5, 0])
 
 // Step C. Break steps of solution
 // Step D. Simplify and solve
@@ -44,7 +44,9 @@ const mergeSort = (arr) => {
 }
 
 // Step E. Test solution
-console.log(mergeSort([1, 10, 20, 25, 99, 83, 9, 1, 2, 3, 30]))
+console.log(mergeSort([37, 45, 29, 81]))
+console.log(mergeSort([2, 1, 9, 65, 4]))
+console.log(mergeSort([1, 4, 4, 5, 0]))
 
 // Step F. Analysis
 // Time Complexity - O(n log n)
