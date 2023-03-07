@@ -52,8 +52,8 @@ console.log(radixSort([83, 83, 1, 2, 3, 30]))
 console.log(radixSort([1, 5, 1, 2, 3, 30]))
 
 // Step F. Analysis
-// Time Complexity - O(n log n)
-// Space Complexity - O(logn)
+// Time Complexity - O(nk) where n is the length of the k is the length of digits(average)
+// Space Complexity - O(n + k)
 
 // Time Analysis.
 const timeMySol1 = performance.now()
