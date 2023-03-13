@@ -48,7 +48,7 @@ class SinglyLinkedList {
     return current
   }
   shift() {
-    if(!this.head) return undefined
+    if (!this.head) return undefined
     let currentHead = this.head
     this.head = currentHead.next
     this.length--
@@ -57,10 +57,30 @@ class SinglyLinkedList {
     }
     return currentHead
   }
+  unshift(val) {
+    // create a new node using passed value
+    let newNode = new Node(val)
+    // If no head property on list, set head and tail to be the newly created node
+    if (!this.head) {
+      this.head = newNode
+      this.tail = newNode
+    }
+    // Otherwise, set newly created node's next property to the current head property on the list
+    newNode.next = this.head
+    // Set the head property on the list to be the newly created node
+    this.head = newNode
+    // Incrememnt length by 1
+    this.length++
+    // return list
+    return this
+  }
 }
 
 let list = new SinglyLinkedList
 list.push("Hello")
 list.push("World")
+list.push("Dessert")
+list.unshift("First")
+list.shift()
 
 console.log(list)
