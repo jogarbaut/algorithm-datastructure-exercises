@@ -64,11 +64,12 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = newNode
       this.tail = newNode
+    } else {
+      // Otherwise, set newly created node's next property to the current head property on the list
+      newNode.next = this.head
+      // Set the head property on the list to be the newly created node
+      this.head = newNode
     }
-    // Otherwise, set newly created node's next property to the current head property on the list
-    newNode.next = this.head
-    // Set the head property on the list to be the newly created node
-    this.head = newNode
     // Incrememnt length by 1
     this.length++
     // return list
