@@ -75,13 +75,42 @@ class SinglyLinkedList {
     // return list
     return this
   }
+  get(index) {
+    // function should accept an index
+    // if index is less than zero or greater than or equal to length of list, return null
+    if (index < 0 || index >= this.length) return null
+    // loop thru list until reach index and return the node at that specific index
+    let counter = 0
+    let current = this.head
+    while (counter !== index) {
+      console.log(counter)
+      current = current.next
+      counter++
+    }
+    return current
+  }
+  // Set - Changing the value of a node based on its position in the Linked List
+  set(index, val) {
+    // function should accept an index and value
+    // uses get function to find the specific node
+    let foundNode = this.get(index)
+    // if node not found, return false
+    if (!foundNode) {
+      return false
+    } else {
+      // if node is found, set the val of that node to the passed val and return true
+      foundNode.val = val
+      return true
+    }
+  }
 }
 
 let list = new SinglyLinkedList
 list.push("Hello")
 list.push("World")
 list.push("Dessert")
-list.unshift("First")
-list.shift()
+list.push("Book")
+list.push("Sweater")
+list.set(4, "Shoe")
 
 console.log(list)
