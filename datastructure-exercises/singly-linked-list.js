@@ -124,6 +124,45 @@ class SinglyLinkedList {
     // return true
     return true
   }
+  // Remove - removing a node from the linked list at a specific position
+  remove(index) {
+    // function should accept an index
+    // if index is less than zero or greater than length, return undefined
+    if (index < 0 || index >= this.length) return false
+    // if index is 0, shift
+    if (index === 0) return this.shift()
+    // if index is same as length - 1, pop
+    if (index === this.length - 1) return this.pop()
+    // otherwise, using get method, access node at the index - 1
+    let prevNode = this.get(index - 1)
+    // set next property on that node to be the next of the next node
+    let removed = prevNode.next
+    prevNode.next = removed
+    // decrement length
+    this.length--
+    // return value of node removed
+    return removed
+  }
+  // Reverse - reverse the linked list in place
+  reverse() {
+  // swap head and tail
+  let node = this.head
+  this.head = this.tail
+  this.tail = node
+  // create variable next
+  let next
+  // create variable prev
+  let prev = null
+  // create variable called node and set to head property
+  // loop thru list
+  for (let i = 0; i < this.length; i++) {
+    next = node.next
+    node.next = prev
+    prev = node
+    node = next
+  }
+  return this
+  }
 }
 
 let list = new SinglyLinkedList
