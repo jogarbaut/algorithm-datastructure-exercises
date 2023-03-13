@@ -103,14 +103,27 @@ class SinglyLinkedList {
       return true
     }
   }
+  // Insert - Adding a node to a specific position
+  insert(index, val) {
+    // function should accept an index and value
+    // if index is less than zero or greater than length, return false
+    if (index < 0 || index > this.length) return false
+    // if index is same as length, push a new node to the end of list
+    if (index === this.length) return !!this.push(val)
+    // if index is 0, unshift a new node to the start of the list
+    if (index === 0) return !!this.unshift(val)
+    // otherwise, using the get method, access the node at index -1
+    let newNode = new Node(val)
+    let prev = this.get(index - 1)
+    // set next property on that node to be the new node
+    let temp = prev.next
+    // set next property on new node to be the previous next
+    newNode.next = temp
+    // increment length
+    this.length++
+    // return true
+    return true
+  }
 }
 
 let list = new SinglyLinkedList
-list.push("Hello")
-list.push("World")
-list.push("Dessert")
-list.push("Book")
-list.push("Sweater")
-list.set(4, "Shoe")
-
-console.log(list)
