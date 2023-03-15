@@ -1,3 +1,6 @@
+// Big O of BST
+// Insertion - O(log n)
+// Searching - O(log n)
 class Node {
   constructor(value) {
     this.value = value
