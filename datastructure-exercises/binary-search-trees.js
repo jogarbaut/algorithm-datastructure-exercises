@@ -1,3 +1,7 @@
+// Time and Space complexitiy 
+// Time complexity is the same for BFS and DFS because each node is visited
+// Space complexitiy of depth first search will be smaller for wide trees because there are less nodes to keep track of (breadth first would take up more space)
+
 // Big O of BST
 // Insertion - O(log n)
 // Searching - O(log n)
@@ -101,7 +105,8 @@ class BinarySearchTree {
   }
   // Depth first search (dfs)
   // DFS - PreOrder (recursively)
-  DFSPreOder(){
+  // can be used to "export" a tree structure so that it is easily reconstructed or copied
+  DFSPreOrder(){
     // create a variable to stroe values of nodes visited
     let data = [] // order of visiting nodes
     // store root of BST in a variable called current
