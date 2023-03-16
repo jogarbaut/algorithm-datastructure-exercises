@@ -120,4 +120,25 @@ class BinarySearchTree {
     // return the array of values
     return data
   }
+  // Depth first search (dfs)
+  // DFS - PostOrder (recursively)
+  DFSPostOrder(){
+    // create a variable to store the values of nodes visited
+    let data = []
+    // store the root of the BST in a variable called current
+    let current = this.root
+    // write a helper function which accepts a node
+    const traverse = (node) => {
+      // if node has a left property, call the helper function with the left property on the node
+      if(node.left) traverse(node.left)
+      // if node has a right property, call the helper function with the right property on the node
+      if(node.right) traverse(node.right)
+      // push the value of the node to the variable that stores the values
+      data.push(node)
+    }
+    // invoke the helper function with the current variable
+    traverse(current)
+    // return the array of values
+    return data
+  }
 }
