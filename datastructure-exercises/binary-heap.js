@@ -1,5 +1,13 @@
 // Binary heap
 // similar to binary search tree but with some different rules
+// Binary heaps are a useful data structure for sorting, and implementing other data structures such as priority queues
+// Bineary heaps are either MaxBinaryHeaps or MinBinaryHeaps with parents either being smaller or larger than children
+// heaps can be represented using arrays
+
+// Big O of Binary Heaps
+// insertion - O(log N)
+// removal - O(log N)
+// search - O(N)
 
 // MaxBinaryHeap - parent nodes are always larger than child nodes
 // each parent node can only have 2 children
