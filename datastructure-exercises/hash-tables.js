@@ -4,6 +4,11 @@
 // ideal for finding values, adding new values, and removing values
 // hash functions provides a way to convert keys into valid array indices
 
+// Big O of Hash Tables
+// insert - O(1)
+// deletion - O(1)
+// access - O(1)
+
 // hash table
 class HashTable {
   constructor(size=53){
